@@ -1,20 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Plain text</title>
-</head>
-<body>
 <?php
-$file = $_GET['filename'];
-$destination = 'snippets/' . $file;
-$fh = fopen("$destination",'r');
+$d =$_GET["filename"];
+$f = 'snippets/' . $d;
+$myfile = fopen("$f", "r") ;
+
 echo '<pre>';
-	while ($line = fgets($fh)) {
-	  echo htmlspecialchars($line);
-	}
+while ($line = fgets($myfile)) {
+	echo htmlspecialchars($line);
+}
 echo '</pre>';
-fclose($fh);
+fclose($myfile);
+
 ?>
-</body>
-</html>
