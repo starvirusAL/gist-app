@@ -16,7 +16,22 @@ body{
 button a, button a:hover {
 	color:white;
 }
-.list-btn{
-	margin-bottom:10px;
-	width:100%;
+li { 
+	text-decoration: none; 
+	text-align: center; 
+	margin-top:5px; 
+	background-color: #664B92; 
+	height: 35px; 
+	width: 100%; 
+	list-style:none; 
+	border-radius: 3px; 
+	color: #fff;
+	line-height: 35px;
+} 
+
+li:hover { 
+	background-color: #4F3A71; 
+}
+a:hover{
+	text-decoration: none;
 }

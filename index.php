@@ -10,7 +10,7 @@
 	<div class="container-fluid">
 	<a href="index.php" id="title"><h2>GIST-APP, v.05.08</h2></a>
 		<div class="row">
-        <div class="col-md-2">
+        <div class="col-md-3 col-sm-3">
         <h4>Choose file:</h4>
         	<ul class="list-unstyled">
         		<!-- printing the list of files in /snippets -->
@@ -19,7 +19,7 @@
 						?>
         	</ul>
         </div>
-        <div class="col-md-10">
+        <div class="col-md-9 col-sm-9">
         	<button id="editBtn" type="button" class="btn btn-success" disabled>EDIT</button>
 					<button id="openBtn" type="button" class="btn btn-info" disabled>OPEN <img src="img/n-tab.png" width="16"></button>
 					<h3 id="filename"></h3>
