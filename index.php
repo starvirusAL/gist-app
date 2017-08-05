@@ -1,5 +1,3 @@
-<?php
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -9,7 +7,7 @@
 </head>
 <body>
 	<div class="container-fluid">
-	<a href="index.php" id="title"><h2>GIST-APP, v.04.08</h2></a>
+	<a href="index.php" id="title"><h2>GIST-APP, v.05.08</h2></a>
 		<div class="row">
         <div class="col-md-2">
         <h4>Choose file:</h4>
