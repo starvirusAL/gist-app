@@ -5,3 +5,11 @@ body{
 .top-buffer { 
 	margin-top:50px;
 }
+#title{
+	color:black;
+	font-weight:900;
+}
+#title:hover{
+	text-decoration: none;
+	color:#337ab7;
+}
