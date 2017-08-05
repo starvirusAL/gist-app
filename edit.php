@@ -2,7 +2,8 @@
 function Read() {
     $filename = $_GET["filename"];
     $file = 'snippets/' . $filename;
-    echo file_get_contents( $file);
+    $out =  file_get_contents($file);
+    echo htmlspecialchars($out);
 }
 ?>
 <!DOCTYPE html>
