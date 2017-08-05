@@ -1,8 +1,8 @@
 <?php
 function Read() {
-	 $filename = $_GET["filename"];
-   $file = 'snippets/' . $filename;
-   echo file_get_contents( $file);
+	$filename = $_GET["filename"];
+	$file = 'snippets/' . $filename;
+	echo file_get_contents( $file);
 }
 ?>
 <!DOCTYPE html>
@@ -13,6 +13,21 @@ function Read() {
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+<script type="text/javascript">
+	function saveFile() {
+		var info = $('#content').val();
+      $.ajax({
+           type: "POST",
+           url: "<?php echo 'save.php?filename=' . $_GET['filename']; ?>",
+           data:{content: info},
+           success:function(html) {
+             alert('File was saved!');
+             location.reload();
+           }
+
+      });
+ }
+</script>
 	<div class="container-fluid">
 	<a href="index.php" id="title"><h2>GIST-APP, v.05.08</h2></a>
 		<div class="row">
@@ -29,8 +44,9 @@ function Read() {
         	<button id="editBtn" type="button" class="btn btn-success" disabled>EDIT</button>
 					<a target="_blank" href="<?php echo 'plaintext.php.php?filename=' . $_GET["filename"]; ?>"><button id="openBtn" type="button" class="btn btn-info">OPEN <img src="img/n-tab.png" width="16"></button></a>
 					<h3 id="filename"><?php echo $_GET["filename"]; ?></h3>
-					<textarea class="form-control top-buffer" rows="10" style="min-width: 100%"><?php Read(); ?></textarea>
-					<button id="saveBtn" type="button" class="btn btn-primary pull-right mt-5 top-buffer">Save</button> 
+					<textarea class="form-control top-buffer" rows="10" style="min-width: 100%" id="content"><?php Read(); ?></textarea>
+					<button id="saveBtn" type="button" class="btn btn-primary pull-right mt-5 top-buffer" onclick="saveFile()">Save</button> 
+					
         </div>
       </div>
 	</div>
