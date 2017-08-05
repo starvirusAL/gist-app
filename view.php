@@ -20,7 +20,7 @@
         <div class="row">
         <div class="col-md-2">
         <h4>Choose file:</h4>
-            <ul>
+            <ul class="list-unstyled">
                 <!-- printing the list of files in /snippets -->
                 <?php
                         include_once "fileList.php";

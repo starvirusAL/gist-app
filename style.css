@@ -13,3 +13,10 @@ body{
 	text-decoration: none;
 	color:#337ab7;
 }
+button a, button a:hover {
+	color:white;
+}
+.list-btn{
+	margin-bottom:10px;
+	width:100%;
+}
