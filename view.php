@@ -1,9 +1,10 @@
 <?php
-function Read() {
-     $filename = $_GET["filename"];
-   $file = 'snippets/' . $filename;
-   echo file_get_contents( $file);
+    function Read() {
+    $filename = $_GET["filename"];
+    $file = 'snippets/' . $filename;
+    echo file_get_contents( $file);
 }
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -27,7 +28,7 @@ function Read() {
         </div>
         <div class="col-md-10">
             <a href="<?php echo 'edit.php?filename=' . $_GET["filename"]; ?>"><button id="editBtn" type="button" class="btn btn-success">EDIT</button></a>
-                    <a target="_blank" href="<?php echo 'plaintext.php.php?filename=' . $_GET["filename"]; ?>"><button id="openBtn" type="button" class="btn btn-info">OPEN <img src="img/n-tab.png" width="16"></button></a>
+                    <a target="_blank" href="<?php echo 'plaintext.php?filename=' . $_GET["filename"]; ?>"><button id="openBtn" type="button" class="btn btn-info">OPEN <img src="img/n-tab.png" width="16"></button></a>
                     <h3 id="filename"><?php echo $_GET["filename"]; ?></h3>
                     <textarea class="form-control top-buffer" rows="10" style="min-width: 100%" disabled><?php Read(); ?></textarea>
                     <button id="saveBtn" type="button" class="btn btn-primary pull-right mt-5 top-buffer" disabled>Save</button> 

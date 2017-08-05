@@ -42,7 +42,7 @@ function Read() {
         </div>
         <div class="col-md-10">
             <button id="editBtn" type="button" class="btn btn-success" disabled>EDIT</button>
-                    <a target="_blank" href="<?php echo 'plaintext.php.php?filename=' . $_GET["filename"]; ?>"><button id="openBtn" type="button" class="btn btn-info">OPEN <img src="img/n-tab.png" width="16"></button></a>
+                    <a target="_blank" href="<?php echo 'plaintext.php?filename=' . $_GET["filename"]; ?>"><button id="openBtn" type="button" class="btn btn-info">OPEN <img src="img/n-tab.png" width="16"></button></a>
                     <h3 id="filename"><?php echo $_GET["filename"]; ?></h3>
                     <textarea class="form-control top-buffer" rows="10" style="min-width: 100%" id="content"><?php Read(); ?></textarea>
                     <button id="saveBtn" type="button" class="btn btn-primary pull-right mt-5 top-buffer" onclick="saveFile()">Save</button> 
