@@ -5,4 +5,5 @@
 	$fp = fopen("$destination", 'w');
 	fwrite($fp, "$recievedInfo");
 	fclose($fp);
+	
 ?>
