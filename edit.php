@@ -1,4 +1,10 @@
 <?php
+$d =  $_GET["filename"];
+$check  = strpos($d, '..');
+if ($check!==false or !$d) {
+  http_response_code(404);
+  exit;
+};
 function Read() {
     $filename = $_GET["filename"];
     $file = 'snippets/' . $filename;
