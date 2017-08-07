@@ -4,9 +4,15 @@ function List_My() {
     if ($file->isFile()) {
       $list = print_r('<a href="view.php?filename=' . $file->getFilename() . '"><li class="li-btn">' . $file->getFilename() . '</li></a>', TRUE);
       echo $list;
+    }
+  }
+};
+
+function list_array_function() {
+  foreach (new DirectoryIterator(__DIR__ . '/snippets') as $file) {
+    if ($file->isFile()) {
       $list_array[] = $file->getFilename();
       $GLOBALS['list_array'] = $list_array;
     }
   }
 }
-?>

@@ -1,7 +1,9 @@
 <?php
+require_once "fileList.php";
+list_array_function();
   $d =  $_GET["filename"];
   $check  = strpos($d, '..');
-  if ($check!==false or !$d) {
+  if ($check!==false or !$d or in_array($d, $list_array)!==true) {
    http_response_code(404);
     exit;
   };
@@ -30,12 +32,7 @@
             <ul class="list-unstyled">
                 <!-- printing the list of files in /snippets -->
                 <?php
-                        include_once "fileList.php";
                         List_My();
-                        if (in_array($_GET["filename"], $list_array)!==true) {
-                          http_response_code(404);
-                          exit;
-                        }
                         ?>
             </ul>
         </div>
