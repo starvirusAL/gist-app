@@ -5,13 +5,13 @@
    http_response_code(404);
     exit;
   };
+
     function Read() {
     $filename = $_GET["filename"];
     $file = 'snippets/' . $filename;
     $out =  file_get_contents($file);
     echo htmlspecialchars($out);
 }
-
 ?>
 <!DOCTYPE html>
 <html>
@@ -31,6 +31,11 @@
                 <!-- printing the list of files in /snippets -->
                 <?php
                         include_once "fileList.php";
+                        List_My();
+                        if (in_array($_GET["filename"], $list_array)!==true) {
+                          http_response_code(404);
+                          exit;
+                        }
                         ?>
             </ul>
         </div>
