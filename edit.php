@@ -45,6 +45,11 @@ function Read() {
                 <!-- printing the list of files in /snippets -->
                 <?php
                         include_once "fileList.php";
+                        List_My();
+                        if (in_array($_GET["filename"], $list_array)!==true) {
+                          http_response_code(404);
+                          exit;
+                        }
                         ?>
             </ul>
         </div>
@@ -53,13 +58,13 @@ function Read() {
                     <a target="_blank" href="<?php echo 'plaintext.php?filename=' . $_GET["filename"]; ?>"><button id="openBtn" type="button" class="btn btn-info">OPEN <img src="img/n-tab.png" width="16"></button></a>
                     <h3 id="filename"><?php echo $_GET["filename"]; ?></h3>
                     <textarea class="form-control top-buffer" rows="10" style="min-width: 100%" id="content"><?php Read(); ?></textarea>
-                    <button id="saveBtn" type="button" class="btn btn-primary pull-right mt-5 top-buffer" onclick="saveFile()">Save</button> 
-                    
+                    <button id="saveBtn" type="button" class="btn btn-primary pull-right mt-5 top-buffer" onclick="saveFile()">Save</button>
+
         </div>
       </div>
     </div>
 
-    
+
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

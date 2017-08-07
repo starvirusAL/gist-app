@@ -7,12 +7,10 @@ if ($check!==false or !$d) {
   exit;
 };
 $myfile = fopen("$f", "r") ;
-
 echo '<pre>';
 while ($line = fgets($myfile)) {
 	echo htmlspecialchars($line);
 }
 echo '</pre>';
 fclose($myfile);
-
 ?>
