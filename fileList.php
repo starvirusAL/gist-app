@@ -16,3 +16,14 @@ function list_array_function() {
     }
   }
 }
+
+function custom() {
+    $connect = mysqli_connect('localhost', 'root', '', 'mytestdatabase');
+    $select = "SELECT * FROM filelist";
+    $result = mysqli_query($connect, $select);
+    $super = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    foreach ($super as $name) {
+    $list = print_r('<a href="view.php?filename=' . $name['name'] . '"><li class="li-btn">' . $name['name'] . '</li></a>', TRUE);
+    echo $list;
+}
+};

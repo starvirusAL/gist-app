@@ -15,8 +15,8 @@
         	<ul class="list-unstyled">
         		<!-- printing the list of files in /snippets -->
         		<?php
-						include_once "fileList.php";
-						List_My();
+						require_once "fileList.php";
+						custom();
 						?>
         	</ul>
         </div>
@@ -29,7 +29,6 @@
         </div>
       </div>
 	</div>
-
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 

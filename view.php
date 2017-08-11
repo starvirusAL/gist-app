@@ -32,7 +32,7 @@ list_array_function();
             <ul class="list-unstyled">
                 <!-- printing the list of files in /snippets -->
                 <?php
-                        List_My();
+                        custom();
                         ?>
             </ul>
         </div>
